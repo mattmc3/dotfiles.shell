@@ -1,3 +1,6 @@
 [submodule ".zsh_custom"]
 	path = .zsh_custom
 	url = git@github.com:mattmc3/zsh_custom.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
