@@ -1,0 +1,16 @@
+~*
+.*history
+.antigen
+.cache
+.zcompdump*
+.zdirs
+.zgen
+*.bak
+*.local
+*.zwc
+*.zwc.old
+*history
+plugins/*
+.zprezto/
+.oh-my-zsh/
+.zplugins/
