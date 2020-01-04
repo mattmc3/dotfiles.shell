@@ -12,5 +12,6 @@
 *history
 plugins/*
 .zprezto/
+.zprezto-contrib/
 .oh-my-zsh/
 .zplugins/
