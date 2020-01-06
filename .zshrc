@@ -14,7 +14,7 @@ export ZSH="$ZDOTDIR/.oh-my-zsh"
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM="$ZDOTDIR/.zsh_custom"
-[[ -d "$ZSH_CUSTOM" ]] || git clone --depth 1 --recursive https://github.com/mattmc3/zsh_custom.git "$ZSH_CUSTOM"
+[[ -d "$ZSH_CUSTOM" ]] || git clone --depth 1 --recursive git@github.com:mattmc3/zsh_custom.git "$ZSH_CUSTOM"
 
 # Other omz variables
 ZSH_DISABLE_COMPFIX=true
@@ -154,3 +154,23 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# set general stuff
+export TZ="America/New_York"
+
+# path
+path=(
+  $HOME/bin
+  /usr/local/{sbin,bin}
+  /usr/{sbin,bin}
+  /{sbin,bin}
+  /usr/local/share/npm/bin
+  .
+  $path
+)
+typeset -gxU path
+
+# dotfiles
+[[ -d "$HOME/.config/dotfiles" ]] && export DOTFILES="$HOME/.config/dotfiles"
+
+return true
