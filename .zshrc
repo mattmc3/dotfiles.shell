@@ -43,6 +43,8 @@ unsetopt CORRECT_ALL           # don't try to correct the spelling of all argume
 # general
 export TZ="America/New_York"
 export LPASS_AGENT_TIMEOUT=0
+export EDITOR="vim"
+export VISUAL="code"
 
 # path
 path=(

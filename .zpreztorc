@@ -34,10 +34,14 @@ zplugins=(
   osx
 
   # me
+  _init
+  _xdg
   aliases
   brew
   cd-ls
+  git-ext
   iwd
+  prezto
   safe-rm
   up
   z
@@ -54,7 +58,7 @@ zstyle ':prezto:load' pmodule $zplugins
 #
 
 # Set the query found color.
-zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:autosuggestions:color' found 'fg=60'
 
 #
 # Completions
