@@ -11,71 +11,10 @@ fi
 
 
 #####
-## setup prezto
-
-# Color output (auto set to 'no' on dumb terminals).
-zstyle ':prezto:*:*' color 'yes'
-
-# Add additional directories to load prezto modules from
-zstyle ':prezto:load' pmodule-dirs ${ZDOTDIR:-$HOME}/.zprezto-contrib
-
-# which prezto modules do you want? order matters!
-# remember to do syntax-highlighting before substring search
-zstyle ':prezto:load' pmodule \
-  'autosuggestions' \
-  'environment' \
-  'terminal' \
-  'editor' \
-  'history' \
-  'directory' \
-  'spectrum' \
-  'utility' \
-  'completion' \
-  'prompt' \
-  'osx' \
-  'aliases' \
-  'cd-ls' \
-  'iwd' \
-  'safe-rm' \
-  'z' \
-  'zfunctions' \
-  'syntax-highlighting' \
-  'history-substring-search'
-
-# Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'emacs'
-
-# Auto convert .... to ../..
-zstyle ':prezto:module:editor' dot-expansion 'yes'
-
-# Set the keyword used by `mand` to open man pages in Dash.app
-zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
-
-# Set the prompt theme to load.
-# Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
-
-# Set the working directory prompt display length.
-# By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
-# for longer or 'full' (with '~' expansion) for even longer prompt display.
-# zstyle ':prezto:module:prompt' pwd-length 'short'
-
-# Set the prompt to display the return code along with an indicator for non-zero
-# return codes. This is not supported by all prompts.
-zstyle ':prezto:module:prompt' show-return-val 'yes'
-
-# Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
-# before deleting or overwriting files. Set to 'no' to disable this safer
-# behavior.
-zstyle ':prezto:module:utility' safe-ops 'yes'
-
-
-#####
-## load prezto
-
+## prezto
+ZSH_CUSTOM=$ZDOTDIR/.zsh_custom
 [[ -d "${ZDOTDIR:-$HOME}/.zprezto" ]] || git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-[[ -d "${ZDOTDIR:-$HOME}/.zprezto-contrib" ]] || git clone --recursive git@github.com:mattmc3/zprezto-contrib.git "${ZDOTDIR:-$HOME}/.zprezto-contrib"
+[[ -d "${ZDOTDIR:-$HOME}/.zsh_custom" ]] || git clone --recursive git@github.com:mattmc3/zsh_custom.git "$ZSH_CUSTOM"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
@@ -119,7 +58,6 @@ typeset -gxU path
 
 # dotfiles
 [[ -d "$HOME/.config/dotfiles" ]] && export DOTFILES="$HOME/.config/dotfiles"
-
 
 ## local
 # make sure that the dotfiles .zshrc.local exists
