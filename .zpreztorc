@@ -11,6 +11,9 @@ zstyle ':prezto:*:*' color 'yes'
 # Add additional directories to load prezto modules from
 zstyle ':prezto:load' pmodule-dirs ${ZDOTDIR:-$HOME}/.zsh_custom/plugins
 
+# Allow module overrides when pmodule-dirs causes module name collisions
+zstyle ':prezto:load' pmodule-allow-overrides 'yes'
+
 # Set the Zsh modules to load (man zshmodules).
 # zstyle ':prezto:load' zmodule 'attr' 'stat'
 
@@ -36,6 +39,7 @@ zplugins=(
   # me
   _init
   _xdg
+  archive
   aliases
   brew
   cd-ls

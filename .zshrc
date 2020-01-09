@@ -13,7 +13,8 @@ fi
 #####
 ## prezto
 ZSH_CUSTOM=$ZDOTDIR/.zsh_custom
-[[ -d "${ZDOTDIR:-$HOME}/.zprezto" ]] || git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+#[[ -d "${ZDOTDIR:-$HOME}/.zprezto" ]] || git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+[[ -d "${ZDOTDIR:-$HOME}/.zprezto" ]] || git clone --recursive https://github.com/zshzoo/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 [[ -d "${ZDOTDIR:-$HOME}/.zsh_custom" ]] || git clone --recursive git@github.com:mattmc3/zsh_custom.git "$ZSH_CUSTOM"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
