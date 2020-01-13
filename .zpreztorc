@@ -28,6 +28,7 @@ zplugins=(
   environment
   terminal
   editor
+  git
   history
   directory
   spectrum
@@ -45,7 +46,9 @@ zplugins=(
   cd-ls
   git-ext
   iwd
+  osx-ext
   prezto
+  python-ext
   safe-rm
   up
   z
