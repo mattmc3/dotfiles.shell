@@ -9,7 +9,9 @@
 zstyle ':prezto:*:*' color 'yes'
 
 # Add additional directories to load prezto modules from
-zstyle ':prezto:load' pmodule-dirs ${ZDOTDIR:-$HOME}/.zsh_custom/plugins
+zstyle ':prezto:load' pmodule-dirs \
+  "${ZDOTDIR:-$HOME}/.oh-my-zsh/plugins" \
+  "${ZDOTDIR:-$HOME}/zmodules"
 
 # Allow module overrides when pmodule-dirs causes module name collisions
 zstyle ':prezto:load' pmodule-allow-overrides 'yes'
@@ -23,6 +25,11 @@ zstyle ':prezto:load' pmodule-allow-overrides 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zplugins=(
+  # init
+  _pre
+  xdg
+  prezto
+
   # prezto
   autosuggestions
   environment
@@ -37,18 +44,18 @@ zplugins=(
   prompt
   osx
 
+  # omz
+  shrink-path
+
   # me
-  _init
-  _xdg
   archive
   aliases
   brew
   cd-ls
-  git-ext
+  git
   iwd
-  osx-ext
-  prezto
-  python-ext
+  osx
+  python
   safe-rm
   up
   z
@@ -57,6 +64,7 @@ zplugins=(
   # final
   syntax-highlighting
   history-substring-search
+  _post
 )
 zstyle ':prezto:load' pmodule $zplugins
 
@@ -94,6 +102,10 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
+
+# Ignore git aliases from prezto
+zstyle ':prezto:module:git:alias' skip 'yes'
+
 
 #
 # GNU Utility
@@ -136,7 +148,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'pure'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
@@ -245,3 +257,6 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
+
+# Don't hit me with autocorrect garbage
+zstyle ':prezto:module:utility' correct 'no'
