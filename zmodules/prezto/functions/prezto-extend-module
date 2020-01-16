@@ -1,0 +1,14 @@
+local modulename _zfunc
+if [[ -z $ZPREZTODIR ]] || [[ ! -d $ZPREZTODIR ]]; then
+  echo "Prezto not configured correctly or not enabled" >&2
+  return 1
+elif [[ -z $1 ]]; then
+  echo "usage: prezto-extend-module <module-name>" >&2
+  return 1
+fi
+modulename="$1"
+fpath=("$ZPREZTODIR"/modules/${modulename}/functions $fpath)
+for _zfunc in "$ZPREZTODIR"/modules/${modulename}/functions/*(.N); do
+  autoload -Uz "$_zfunc"
+done
+source $ZPREZTODIR/modules/${modulename}/init.zsh

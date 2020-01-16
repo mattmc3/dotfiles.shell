@@ -1,0 +1,2 @@
+[[ -z "$1" ]] && { echo "Expecting workon project name"; return 1; }
+source "$WORKON_HOME/$1/bin/activate"

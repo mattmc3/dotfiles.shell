@@ -9,10 +9,12 @@
 *.local
 *.zwc
 *.zwc.old
-*history
+z*history
 plugins/*
 .zprezto/
 .zprezto-contrib/
 .oh-my-zsh/
 .zplugins/
 .zsh_custom/
+prompt_spaceship_setup
+external/

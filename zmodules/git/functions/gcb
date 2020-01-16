@@ -1,0 +1,10 @@
+[[ -n $1 ]] || {
+  echo "gcb (git checkout -b): Usage - gcb <branch>" >&2
+  return 1
+}
+branchname="$1"
+yyyymmdd=$(date '+%Y%m%d')
+acct=$(whoami)
+who=${MYABBREV:-$acct}
+fullbranchname="${yyyymmdd}_${who}_${branchname}"
+git checkout -b "$fullbranchname"
