@@ -4,4 +4,3 @@ if [[ ! -f "${ZDOTDIR:-HOME}"/.zshrc.local ]] && [[ -f "${DOTFILES}"/local/zsh/z
   ln -s "${DOTFILES}"/local/zsh/zsh/zshrc.local.zsh "${ZDOTDIR:-HOME}"/.zshrc.local
 fi
 [[ -f "${ZDOTDIR:-HOME}"/.zshrc.local ]] && . "${ZDOTDIR:-HOME}"/.zshrc.local
-clear
