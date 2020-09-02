@@ -1,0 +1,9 @@
+~*
+.*history
+.cache
+.zcompdump*
+*.bak
+*.local
+*.zwc
+*.zwc.old
+z*history
