@@ -1,4 +1,5 @@
-# I don't care for all the aliases in the existing omz git plugin
+# extend rather than override
+zstyle -t ":prezto:module:prezto" loaded 'yes' && prezto-extend-module git
 
 alias get="git"
 alias gadd="git add ."
