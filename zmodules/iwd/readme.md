@@ -7,11 +7,11 @@ Initial working directory
 Show the first working directory your terminal opened in:
 
 ```zsh
-iwd
+echo $IWD
 ```
 
 Change to the first working directory your terminal opened in:
 
 ```zsh
-cd $IWD
+iwd
 ```
