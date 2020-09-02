@@ -7,3 +7,4 @@
 *.zwc
 *.zwc.old
 z*history
+.antibody/

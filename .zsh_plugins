@@ -1,0 +1,33 @@
+# stuff that should be first
+mafredri/zsh-async
+
+# core
+zshzoo/setopts
+zshzoo/history
+zshzoo/keybindings
+zshzoo/compinit
+
+# fish shell goodies in zsh
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+zshzoo/abbr branch:main
+zshzoo/zshrc.d
+zshzoo/zfunctions
+
+# features
+peterhurford/up.zsh
+rummik/zsh-tailf
+
+# omz
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+
+# prezto
+sorin-ionescu/prezto path:modules/terminal
+
+# prompts
+sindresorhus/pure
+# miekg/lean
+
+# stuff that has to be last
+zsh-users/zsh-syntax-highlighting
