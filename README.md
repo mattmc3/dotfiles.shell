@@ -12,7 +12,7 @@ find ~ -type f -maxdepth 1 -name '.zsh*' -exec cp {} {}.bak \;
 export ZDOTDIR=~/.zsh
 
 # clone this repo
-git clone -b antibody git@github.com:mattmc3/zdotdir.git $ZDOTDIR
+git clone -b antibody --recursive git@github.com:mattmc3/zdotdir.git $ZDOTDIR
 
 # symlink the .zshenv file (alternatively, you can just source it from ~/.zshenv)
 ln -sf $ZDOTDIR/.zshenv ~/.zshenv

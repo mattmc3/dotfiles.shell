@@ -1,33 +1,66 @@
 # stuff that should be first
 mafredri/zsh-async
 
-# core
-zshzoo/setopts
-zshzoo/history
-zshzoo/keybindings
-zshzoo/compinit
+# my initial plugins
+$ZSH_CUSTOM/plugins/_init
+$ZSH_CUSTOM/plugins/xdg
+$ZSH_CUSTOM/plugins/core-setopts
+$ZSH_CUSTOM/plugins/core-history
+$ZSH_CUSTOM/plugins/core-environment
+$ZSH_CUSTOM/plugins/core-compinit
 
 # fish shell goodies in zsh
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
-zshzoo/abbr branch:main
-zshzoo/zshrc.d
-zshzoo/zfunctions
+zshzoo/abbr
 
-# features
-peterhurford/up.zsh
-rummik/zsh-tailf
+# omz lib
+ohmyzsh/ohmyzsh path:lib/clipboard.zsh
+ohmyzsh/ohmyzsh path:lib/directories.zsh
+ohmyzsh/ohmyzsh path:lib/termsupport.zsh
+ohmyzsh/ohmyzsh path:lib/key-bindings.zsh
 
-# omz
+# omz plugins
+ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 
 # prezto
-sorin-ionescu/prezto path:modules/terminal
+# sorin-ionescu/prezto path:modules/terminal
+
+# my goodies
+$ZSH_CUSTOM/plugins/aliases
+$ZSH_CUSTOM/plugins/brew
+$ZSH_CUSTOM/plugins/cd-ls
+$ZSH_CUSTOM/plugins/dotfiles
+$ZSH_CUSTOM/plugins/git
+$ZSH_CUSTOM/plugins/golang
+$ZSH_CUSTOM/plugins/groovy
+$ZSH_CUSTOM/plugins/iwd
+$ZSH_CUSTOM/plugins/java
+$ZSH_CUSTOM/plugins/jupyter
+$ZSH_CUSTOM/plugins/lpass
+$ZSH_CUSTOM/plugins/osx
+$ZSH_CUSTOM/plugins/python
+$ZSH_CUSTOM/plugins/ruby
+$ZSH_CUSTOM/plugins/safe-rm
+$ZSH_CUSTOM/plugins/shrink-path
+$ZSH_CUSTOM/plugins/tmux
+$ZSH_CUSTOM/plugins/todo-txt
+$ZSH_CUSTOM/plugins/up
+$ZSH_CUSTOM/plugins/vscode
+$ZSH_CUSTOM/plugins/zfunctions
+
+# features
+# peterhurford/up.zsh
+rummik/zsh-tailf
+rupa/z
+mattmc3/zsh-safe-rm
 
 # prompts
 sindresorhus/pure
 # miekg/lean
 
 # stuff that has to be last
+$ZSH_CUSTOM/plugins/local
 zsh-users/zsh-syntax-highlighting
