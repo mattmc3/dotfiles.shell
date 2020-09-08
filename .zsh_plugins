@@ -1,13 +1,25 @@
+# if using antibody with dynamic sourcing:
+#   change this file all you want
+#
+# dynamic sourcing code:
+# source <(antibody init)
+# envsubst < $ZDOTDIR/zsh_plugins.conf | antibody bundle
+#
+# if using antibody with static sourcing:
+#   when you change this file, delete the generated zsh_plugins.zsh file to
+#   regenerate the static zsh_plugins.zsh
+#
+# static code:
+# if [[ ! -f "$ZDOTDIR/zsh_plugins.zsh" ]]; then
+#  envsubst < $ZDOTDIR/zsh_plugins.conf | antibody bundle > $ZDOTDIR/zsh_plugins.zsh
+#  sed -i '' "s|$HOME|\$HOME|g" $ZDOTDIR/zsh_plugins.zsh
+# fi
+# source $ZDOTDIR/zsh_plugins.zsh
+
 # stuff that should be first
 mafredri/zsh-async
-
-# my initial plugins
 $ZSH_CUSTOM/plugins/_init
-$ZSH_CUSTOM/plugins/xdg
-$ZSH_CUSTOM/plugins/core-setopts
-$ZSH_CUSTOM/plugins/core-history
-$ZSH_CUSTOM/plugins/core-environment
-$ZSH_CUSTOM/plugins/core-compinit
+mattmc3/zsh-init
 
 # fish shell goodies in zsh
 zsh-users/zsh-autosuggestions
@@ -50,11 +62,12 @@ $ZSH_CUSTOM/plugins/todo-txt
 $ZSH_CUSTOM/plugins/up
 $ZSH_CUSTOM/plugins/vscode
 $ZSH_CUSTOM/plugins/zfunctions
+$ZSH_CUSTOM/plugins/z
 
 # features
 # peterhurford/up.zsh
 rummik/zsh-tailf
-rupa/z
+# rupa/z
 mattmc3/zsh-safe-rm
 
 # prompts
@@ -64,3 +77,4 @@ sindresorhus/pure
 # stuff that has to be last
 $ZSH_CUSTOM/plugins/local
 zsh-users/zsh-syntax-highlighting
+#zdharma/fast-syntax-highlighting

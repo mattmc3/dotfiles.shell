@@ -20,19 +20,16 @@ typeset -gxU path
 
 # use antibody as our plugin manager
 export ANTIBODY_HOME=$ZDOTDIR/.antibody
-export ZSH_CUSTOM=$ZDOTDIR/.zsh_custom
+export ZSH_CUSTOM=$ZDOTDIR/custom
 
-# dynamic plugins
+# # dynamic plugins
 # source <(antibody init)
 # #antibody bundle < $ZDOTDIR/.zsh_plugins
-# envsubst < $ZDOTDIR/.zsh_plugins | antibody bundle
+# envsubst < $ZDOTDIR/zsh_plugins.conf | antibody bundle
 
 # static plugins
 if [[ ! -f "$ZDOTDIR/.zsh_plugins.zsh" ]]; then
   envsubst < $ZDOTDIR/.zsh_plugins | antibody bundle > $ZDOTDIR/.zsh_plugins.zsh
-  # sed -i '' "s|$ANTIBODY_HOME|\$ANTIBODY_HOME|g" $ZDOTDIR/.zsh_plugins.zsh
-  # sed -i '' "s|$ZSH_CUSTOM|\$ZSH_CUSTOM|g" $ZDOTDIR/.zsh_plugins.zsh
-  # sed -i '' "s|$ZDOTDIR|\$ZDOTDIR|g" $ZDOTDIR/.zsh_plugins.zsh
   sed -i '' "s|$HOME|\$HOME|g" $ZDOTDIR/.zsh_plugins.zsh
 fi
 source $ZDOTDIR/.zsh_plugins.zsh

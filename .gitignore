@@ -10,3 +10,4 @@ z*history
 .antibody/
 .zsh_custom/
 .zsh_plugins.zsh
+.zcompcache/
