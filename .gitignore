@@ -8,6 +8,8 @@
 *.zwc.old
 z*history
 .antibody/
+.zplugins/
 .zsh_custom/
 .zsh_plugins.zsh
 .zcompcache/
+sandbox/
