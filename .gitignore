@@ -15,3 +15,5 @@ zplugins/*
 .oh-my-zsh/
 .antibody/
 .zcompcache/
+.zsh_sessions/
+plugins/
