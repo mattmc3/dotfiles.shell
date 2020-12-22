@@ -32,4 +32,4 @@ path=(
 typeset -gU cdpath fpath mailpath path
 
 # dotfiles
-[[ -d "$HOME/.dotfiles" ]] && export DOTFILES="$HOME/.dotfiles"
+[[ -d "$HOME/.config/dotfiles" ]] && export DOTFILES="$HOME/.config/dotfiles"
