@@ -114,4 +114,4 @@ alias autorotate="jhead -autorot"
 alias dotf='cd "$DOTFILES" && ${VISUAL:-$EDITOR} .'
 
 # jupyter
-alias juno="jupyter notebook"
+# alias juno="jupyter notebook"
