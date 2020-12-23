@@ -1,0 +1,4 @@
+# or
+if [[ $? -ne 0 ]] && [[ "$#" -gt 0 ]]; then
+  eval $@
+fi
