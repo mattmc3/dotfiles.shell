@@ -18,9 +18,10 @@ fi
 # path
 path=(
   $HOME/bin
-  /usr/local/{sbin,bin}
-  /usr/{sbin,bin}
-  /{sbin,bin}
+  /opt/homebrew/{bin,sbin}
+  /usr/local/{bin,sbin}
+  /usr/{bin,sbin}
+  /{bin,sbin}
   $HOME/.emacs.d/bin
   /usr/local/share/npm/bin
   /usr/local/opt/go/libexec/bin
