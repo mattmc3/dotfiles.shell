@@ -5,7 +5,7 @@ fi
 command cd "$ZDOTDIR"
 
 if [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
-  echo "cleanzwc"
+  echo "rmzwc"
   echo "  cleans zcompiled files"
   echo "options:"
   echo " -q         Quiet"

@@ -1,8 +1,7 @@
 # ~/.zshenv only needs to source this file:
-# echo "source \$HOME/.config/zsh/.zshenv" >| ~/.zshenv
+# echo "source ~/.config/zsh/.zshenv" >| ~/.zshenv
 
 export ZDOTDIR="${ZDOTDIR:-$HOME/.config/zsh}"
-export ANTIBODY_HOME="${ANTIBODY_HOME:-$ZDOTDIR/zplugins}"
 
 # Set XDG dirs
 export XDG_CONFIG_HOME=$HOME/.config
@@ -19,4 +18,4 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export XDG_VIDEOS_DIR="$HOME/Videos"
 fi
 
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/.config/dotfiles

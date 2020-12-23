@@ -55,13 +55,12 @@ alias rmi='rm -i'
 alias _='sudo'
 alias c='clear'
 alias d='dirs -v | head -10'
-alias v='nvim'
+alias v='vim'
 alias h='history'
 
 # shortcuts
-alias vi='nvim'
-alias vim='nvim'
-alias realvim='\vim'
+alias vi='vim'
+alias nv='nvim'
 alias afind='ack -il'
 alias md='mkdir -p'
 alias rd=rmdir
@@ -110,3 +109,9 @@ alias zdot='cd $ZDOTDIR'
 
 # auto-orient images based on exif tags
 alias autorotate="jhead -autorot"
+
+# dotfiles
+alias dotf='cd "$DOTFILES" && ${VISUAL:-$EDITOR} .'
+
+# jupyter
+alias juno="jupyter notebook"

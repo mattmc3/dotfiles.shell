@@ -1,9 +1,13 @@
 ael-code/zsh-colored-man-pages
 mafredri/zsh-async
 mattmc3/zfunctions
+mattmc3/zsh-cd-ls
 mattmc3/zsh-history
 mattmc3/zsh-setopts
+mattmc3/zsh-xdg-basedirs
+mattmc3/zshrc.d
 ohmyzsh/ohmyzsh
+olets/zsh-abbr
 rupa/z
 sindresorhus/pure
 zdharma/fast-syntax-highlighting
