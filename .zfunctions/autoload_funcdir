@@ -1,0 +1,10 @@
+# add a lazy-load function directory
+local funcdir="$1"
+if [[ ! -d "$funcdir" ]]; then
+  echo "Function directory not found: $1" >&2 && return 1
+fi
+fpath=("$funcdir" $fpath)
+local fn
+for fn in "$funcdir"/*(.N); do
+  autoload -Uz "$fn"
+done
