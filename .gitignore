@@ -11,3 +11,7 @@
 *.zwc.old
 *history
 plugins/*
+.zsh_sessions/
+.ohmyzsh/
+.oh-my-zsh/
+.zsh_custom/
