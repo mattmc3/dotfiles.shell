@@ -1,8 +1,0 @@
-local plugin="$1"
-local repo_user=${plugin%%/*}
-local repo_name=${plugin##*/}
-local zpluginsdir="${ZPLUGINSDIR:-~/.config/zsh/plugins}"
-
-[[ -d "$zpluginsdir/$repo_name" ]] ||
-  git clone --depth=1 --recursive https://github.com/$plugin.git "$zpluginsdir/$repo_name"
-source "$zpluginsdir/$repo_name/$repo_name.plugin.zsh"
