@@ -1,12 +1,21 @@
-# ~/.zshenv should only contain a line to source this file:
-# echo "[[ -f \$HOME/.zsh/.zshenv ]] && . \$HOME/.zsh/.zshenv" > ~/.zshenv
+# ~/.zshenv should only be a one-liner that sources this file
+# echo "source ~/.config/zsh/.zshenv" >| ~/.zshenv
 
-export ZDOTDIR=${ZDOTDIR:-$HOME/.zsh}
+export ZDOTDIR=~/.config/zsh
 
 # Set XDG dirs
-export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
-export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
-export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-$HOME/.xdg}"
+export XDG_CONFIG_HOME=~/.config
+export XDG_CACHE_HOME=~/.cache
+export XDG_DATA_HOME=~/.local/share
+export XDG_RUNTIME_DIR=~/.xdg
+
+if [[ "$OSTYPE" == darwin* ]]; then
+  export XDG_DESKTOP_DIR=~/Desktop
+  export XDG_DOCUMENTS_DIR=~/Documents
+  export XDG_DOWNLOAD_DIR=~/Downloads
+  export XDG_MUSIC_DIR=~/Music
+  export XDG_PICTURES_DIR=~/Pictures
+  export XDG_VIDEOS_DIR=~/Videos
+fi
 
 [[ -d "$HOME/.config/dotfiles" ]] && export DOTFILES="$HOME/.config/dotfiles"
