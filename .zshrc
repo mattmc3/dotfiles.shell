@@ -24,20 +24,28 @@ zstyle ':xdg-basedirs:*' apps $XDG_APPS
 
 # the whole config is a plugin chain
 zstyle ':znap:*' plugins-dir $ZDOTDIR/plugins
+zstyle ':znap:*' auto-compile no
+[[ -f $ZDOTDIR/plugins/zsh-snap/znap.zsh ]] ||
+  git clone --depth=1 https://github.com/marlonrichert/zsh-snap.git $ZDOTDIR/plugins/zsh-snap
 source $ZDOTDIR/plugins/zsh-snap/znap.zsh
 
-znap source zsh-async
-znap prompt pure
+# pure prompt
+fpath+=$ZDOTDIR/plugins/pure
+autoload -U promptinit; promptinit
+prompt pure
 
 # setup ZSH nicely
 znap source zsh-xdg-basedirs
 znap source zsh-setopts
 znap source zsh-history
 znap source zfunctions
+
 # external plugin goodies
-znap source ohmyzsh lib/{clipboard,termsupport,key-bindings} plugins/{colored-man-pages,copyfile,copydir,extract,history-substring-search,osx,sublime,z}
+znap source ohmyzsh lib/{clipboard,functions,termsupport,key-bindings}
+znap source ohmyzsh plugins/{colored-man-pages,copyfile,copydir,extract,history-substring-search,osx,sublime,z}
 znap source zsh-autosuggestions
 znap source zsh-completions
+
 # final plugins
 znap source zshrc.d
 znap source fast-syntax-highlighting
